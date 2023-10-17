@@ -1,4 +1,4 @@
-import { NavigationLink } from "@/types/ChildrenProps";
+import { NavigationLink } from "@/types/types";
 
 export const navLinks: NavigationLink[] = [
   {

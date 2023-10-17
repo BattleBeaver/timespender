@@ -1,4 +1,4 @@
-import { ChildrenProps } from "@/types/ChildrenProps";
+import { ChildrenProps } from "@/types/types";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,5 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: ChildrenProps) {
-  return <div className="bg-blue-900 h-screen">{children}</div>;
+  return <div>{children}</div>;
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/style/global.css";
 import { ChildrenProps } from "@/types/ChildrenProps";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Timespender",
@@ -13,9 +14,10 @@ export default function RootLayout({ children }: ChildrenProps) {
     <html lang="en">
       <body className="h-screen">
         <Navigation />
-        <div className="overflow-y-hidden mx-2 border min-h-16 flex flex-col justify-center items-center">
+        <div className="overflow-y-hidden mx-2 min-h-16 flex flex-col justify-center items-center">
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );

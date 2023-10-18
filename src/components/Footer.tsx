@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer footer-center p-1.5 bg-base-200 text-base-content rounded">
+    <footer className="footer footer-center p-1.5 bg-base-200 text-base-content rounded h-25">
       <nav className="grid grid-flow-col gap-4">
         <Link href="/about" className="link link-hover">
           About me
@@ -13,7 +13,7 @@ const Footer = () => {
         </Link>
       </nav>
       <nav>
-        <div className="grid grid-flow-col gap-4">
+        <div className=" grid-flow-col gap-4 hidden md:grid">
           <Link href="https://www.linkedin.com/in/dmytro-shchepinskyi-349a38214/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ const Footer = () => {
           </Link>
         </div>
       </nav>
-      <aside>
+      <aside className="hidden md:flex">
         <p>Copyright © 2023 - All right reserved</p>
       </aside>
     </footer>

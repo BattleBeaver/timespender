@@ -6,5 +6,9 @@ export const metadata: Metadata = {
 };
 
 export default function NewsLayout({ children }: ChildrenProps) {
-  return <div className="flex">{children}</div>;
+  return (
+    <div className="flex w-full h-full justify-center items-center p-3">
+      {children}
+    </div>
+  );
 }

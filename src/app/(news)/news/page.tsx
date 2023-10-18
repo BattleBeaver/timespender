@@ -160,7 +160,7 @@ const exampleOutput = {
 
 const NewsPage = () => {
   return (
-    <div className="w-screen overflow-y-hidden flex flex-col">
+    <div className="w-10/12 h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-1">
       {exampleOutput.articles.map((article, ardicleIdx) => {
         return <NewsCard key={ardicleIdx} {...article} />;
       })}

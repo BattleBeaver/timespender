@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: ChildrenProps) {
   return (
     <html lang="en">
-      <body className="h-screen flex flex-col justify-between overflow-hidden">
+      <body className="h-screen flex flex-col justify-between overflow-hidden gap-4">
         <div className="sticky">
           <Navigation />
         </div>

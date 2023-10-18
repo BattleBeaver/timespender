@@ -12,13 +12,19 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: ChildrenProps) {
   return (
     <html lang="en">
-      <body className="h-screen flex flex-col justify-between">
-        <Navigation />
-        <div className="flex items-center justify-center overflow-auto mb-auto">
+      <body className="h-screen flex flex-col justify-between overflow-hidden">
+        <div className="sticky">
+          <Navigation />
+        </div>
+        <div className="flex overflow-y-auto overflow-x-hidden items-center justify-center">
           {children}
         </div>
-        <Footer />
+        <div className="sticky">
+          <Footer />
+        </div>
       </body>
     </html>
   );
 }
+
+//  className = "flex items-center justify-center overflow-auto mb-auto";

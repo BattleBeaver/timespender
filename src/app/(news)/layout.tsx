@@ -5,6 +5,6 @@ export const metadata: Metadata = {
   title: "News",
 };
 
-export default function RootLayout({ children }: ChildrenProps) {
-  return <div>{children}</div>;
+export default function NewsLayout({ children }: ChildrenProps) {
+  return <div className="flex">{children}</div>;
 }

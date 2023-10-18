@@ -160,7 +160,7 @@ const exampleOutput = {
 
 const NewsPage = () => {
   return (
-    <div className="grid grid-cols-[repeat(auto-fill, minmax(300px, 1fr))]">
+    <div className="w-screen overflow-y-hidden flex flex-col">
       {exampleOutput.articles.map((article, ardicleIdx) => {
         return <NewsCard key={ardicleIdx} {...article} />;
       })}

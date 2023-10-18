@@ -1,4 +1,6 @@
+"use client";
 import { NewsItem } from "@/types/types";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -7,14 +9,20 @@ const formatDate = (dateString: string) => {
   return date.toLocaleDateString("ukrayina");
 };
 
+const externaImageLoader = ({ src }: { src: string }) => `${src}`;
+
 const NewsCard = (data: NewsItem) => {
   return (
     <div className="card w-72 md:w-96 bg-base-100 shadow-xl border">
       <figure>
-        <img
+        <Image
+          loader={externaImageLoader}
           alt={data.title}
           src={data.image}
+          unoptimized={true}
           className="w-full max-h-52 object-cover"
+          height={300}
+          width={200}
         />
       </figure>
       <div className="card-body p-5">

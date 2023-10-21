@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="flex items-center p-7 flex-col w-8/12 gap-6 h-full">
+    <div className="flex items-center p-7 flex-col w-1/2 gap-6 h-full">
       <h1 className="text-4xl" style={{ textShadow: "#FC0 1px 0 10px" }}>
         Welcome to Dmytro&apos;s Corner of the Web!
       </h1>

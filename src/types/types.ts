@@ -21,3 +21,9 @@ export type NewsItem = {
     url: string;
   };
 };
+
+export type NewsResponse = {
+  status: string;
+  totalResults: number;
+  articles: NewsItem[];
+};

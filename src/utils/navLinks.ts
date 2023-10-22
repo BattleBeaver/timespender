@@ -10,7 +10,7 @@ export const navLinks: NavigationLink[] = [
     href: "/news",
   },
   {
-    name: "About",
-    href: "/about",
+    name: "Random Cat",
+    href: "/randomcat",
   },
 ];

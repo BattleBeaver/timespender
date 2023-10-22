@@ -19,14 +19,12 @@ const fetchNews = async (
     },
   })
     .then((response) => response.json())
-    .then(
-      async (result) => {
-        return result;
-      },
-      (error) => {
-        return error;
-      }
-    );
+    .then((result) => {
+      return result;
+    })
+    .catch((error) => {
+      return error;
+    });
   return news;
 };
 

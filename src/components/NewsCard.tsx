@@ -15,7 +15,7 @@ const NewsCard = (data: NewsItem) => {
           alt={data.title}
           src={data.image}
           unoptimized={true}
-          className="w-full max-h-52 object-cover"
+          className="w-full h-52 object-cover"
           height={300}
           width={200}
           placeholder="blur"

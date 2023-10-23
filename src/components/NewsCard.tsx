@@ -29,9 +29,6 @@ const NewsCard = (data: NewsItem) => {
           <div>{formatDate(data.publishedAt)}</div>
           <div className="flex gap-2">
             <div className={badgeStyle}>
-              <Link href={`/news/${data.id}`}>Read</Link>
-            </div>
-            <div className={badgeStyle}>
               <Link href={data.url}>Source</Link>
             </div>
           </div>

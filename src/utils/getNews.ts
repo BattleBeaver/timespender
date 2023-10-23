@@ -1,3 +1,5 @@
+import { NewsItem } from "@/types/types";
+
 const KEY = "6804c7f8bc6a98995e59b692337fe187";
 const DEFAULT_CATEGORY = "general";
 const GNEWS_URL = "https://gnews.io/api/v4/";
@@ -25,6 +27,10 @@ const fetchNews = async (
     .catch((error) => {
       return error;
     });
+  news.articles.map((art: NewsItem, index: number) => {
+    art.id = index.toString();
+    return art;
+  });
   return news;
 };
 

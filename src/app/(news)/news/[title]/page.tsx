@@ -1,5 +1,5 @@
 import ArticleComponent from "@/components/ArticleComponent";
-import { NewsResponse } from "@/types/types";
+import { NewsItem, NewsResponse } from "@/types/types";
 import fetchNews from "@/utils/getNews";
 import { Suspense } from "react";
 
@@ -9,11 +9,23 @@ type ArticlePageProps = {
   };
 };
 
-const ArticlePage = async ({ params }: ArticlePageProps) => {
-  const articleTitle = decodeURIComponent(params.title);
+export async function generateStaticParams({ params }: ArticlePageProps) {
   const headLiners = (await fetchNews()) as NewsResponse;
 
-  const article = headLiners.articles.find((art) => art.title === articleTitle);
+  return headLiners.articles.map((art) => {
+    return {
+      title: encodeURIComponent(art.title),
+    };
+  });
+}
+
+const ArticlePage = async ({ params }: { params: { title: string } }) => {
+  const selectedTitle = decodeURIComponent(params.title);
+  const headLiners = (await fetchNews()) as NewsResponse;
+  const article = headLiners.articles.find(
+    (art) => art.title === selectedTitle
+  );
+
   return (
     <Suspense
       fallback={<span className="loading loading-spinner text-primary"></span>}

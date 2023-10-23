@@ -1,8 +1,6 @@
 import { NewsItem } from "@/types/types";
 
-const KEY = "6804c7f8bc6a98995e59b692337fe187";
 const DEFAULT_CATEGORY = "general";
-const GNEWS_URL = "https://gnews.io/api/v4/";
 const DEFAULT_TYPE = "top-headlines";
 const DEFAULT_LANG = "uk";
 const DEFAULT_COUNTRY = "ua";
@@ -13,7 +11,7 @@ const fetchNews = async (
   country = DEFAULT_COUNTRY,
   language = DEFAULT_LANG
 ) => {
-  const path = `${GNEWS_URL}${reqType}?category=${category}&lang=${language}&country=${country}&max=10&apikey=${KEY}`;
+  const path = `${process.env.GNEWS_URL}${reqType}?category=${category}&lang=${language}&country=${country}&max=10&apikey=${process.env.KEY}`;
 
   const news = await fetch(path, {
     next: {

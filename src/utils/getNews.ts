@@ -13,11 +13,7 @@ const fetchNews = async (
 ) => {
   const path = `${process.env.GNEWS_URL}${reqType}?category=${category}&lang=${language}&country=${country}&max=10&apikey=${process.env.KEY}`;
 
-  const news = await fetch(path, {
-    next: {
-      revalidate: 60 * 60 * 24, // revalidate once per day
-    },
-  })
+  const news = await fetch(path)
     .then((response) => response.json())
     .then((result) => {
       return result;

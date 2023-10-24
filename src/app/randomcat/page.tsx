@@ -34,7 +34,7 @@ const RandomCatPicture = async () => {
       <img
         alt="Picture of the cat"
         src={picture}
-        className="w-2/3 object-cover"
+        className="w-1/3 object-cover"
       />
       <h3 className="text-3xl text-orange-600">Cat facts:</h3>
       <div className="flex w-2/3 flex-col items-center gap-3 text-center">
